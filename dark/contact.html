@@ -164,31 +164,39 @@
             </div>
             <!-- Left Side Ends -->
             <!-- Contact Form Starts -->
-            <form class="contactform" method="post" action="https://formspree.io/f/mrgnogqq">
-                <div class="contactform">
-                    <div class="row">
-                        <div class="col-12 col-md-4">
-                            <input type="text" name="name" placeholder="Seu Nome">
+            <div class="contact-form-container">
+                <form class="contactform" method="post" action="https://formspree.io/f/mrgnogqq">
+                    <div class="contactform">
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <input type="text" name="name" placeholder="Seu Nome">
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <input type="email" name="_replyto" placeholder="Seu Email">
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <input type="text" name="subject" placeholder="Assunto">
+                            </div>
+                            <div class="col-12">
+                                <textarea name="message" placeholder="Escreva"></textarea>
+                                <button type="submit" class="btn btn-contact">ENVIAR</button>
+                            </div>
                         </div>
-                        <div class="col-12 col-md-4">
-                            <input type="email" name="_replyto" placeholder="Seu Email">
-                        </div>
-                        <div class="col-12 col-md-4">
-                            <input type="text" name="subject" placeholder="Assunto">
-                        </div>
-                        <div class="col-12">
-                            <textarea name="message" placeholder="Escreva"></textarea>
-                            <button type="submit" class="btn btn-contact">ENVIAR</button>
-                        </div>
-                     
-                       
                     </div>
+                </form>
+                <!-- Mensagem de Sucesso -->
+                <div id="success-message" style="display: none;">
+                    Mensagem enviada com sucesso!
                 </div>
-            </form>
+                <!-- Fim da Mensagem de Sucesso -->
             </div>
             <!-- Contact Form Ends -->
         </div>
     </div>
+</div>
+
+<!-- Adicione aqui os seus scripts JavaScript -->
+
 
 </section>
 <!-- Template JS Files -->
@@ -205,9 +213,34 @@
 <script src="js/bootstrap.js"></script>
 <script src="js/custom.js"></script>
 <script>
-    
-</script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var form = document.querySelector(".contactform");
+        var successMessage = document.getElementById("success-message");
 
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            var formData = new FormData(form);
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", form.action);
+            xhr.setRequestHeader("Accept", "application/json");
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState !== XMLHttpRequest.DONE) return;
+
+                if (xhr.status === 200) {
+                    form.reset(); // Limpa o formulário
+                    form.classList.add("form-success"); // Adiciona a classe para estilizar o sucesso
+                    successMessage.style.display = "block"; // Exibe a mensagem de sucesso
+                } else {
+                    console.error("Ocorreu um erro ao enviar o formulário.");
+                }
+            };
+
+            xhr.send(formData);
+        });
+    });
+</script>
 </body>
 
 
