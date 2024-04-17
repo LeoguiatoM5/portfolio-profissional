@@ -267,6 +267,18 @@ body.light hr.separator {
     top: 31px;
   }
 }
+
+
+
+@media (max-width: 767px) {
+  .cv-btn {
+    margin-top: 1%;
+    margin-left: 3px; /* Ajuste conforme necessário */
+
+  }
+}
+
+
 /*** Buttons ***/
 .btn {
   box-shadow: none !important;
@@ -1218,6 +1230,12 @@ body.light hr.separator {
     margin-right: 20px;
     margin-bottom: 20px;
   }
+
+  .espace2{
+    
+    margin-top: 100px;
+    
+  }
   .btn.btn-about:before {
     content: "\f007";
     margin-bottom: 20px;
@@ -1262,6 +1280,13 @@ body.light hr.separator {
 @media screen and (max-width: 768px) {
   .btn-about {
       margin-bottom: 20px; /* Adiciona uma margem inferior para separar os botões em dispositivos móveis */
+  }
+}
+
+
+@media (min-width: 768px) {
+  .cv-desk {
+    margin-top: 20px; /* Ajuste conforme necessário */
   }
 }
 
