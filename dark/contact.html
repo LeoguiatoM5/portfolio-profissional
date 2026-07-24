@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 
 <head>
     <meta charset="utf-8">
-    <title>Contato</title>
+    <title>Contato | Leonardo Guiato</title>
+    <meta name="description" content="Entre em contato com Leonardo Guiato para oportunidades e projetos de tecnologia.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Template Google Fonts -->
@@ -120,7 +121,7 @@
     <!-- Mobile Menu Starts -->
     <nav role="navigation" class="d-block d-lg-none">
         <div id="menuToggle">
-            <input type="checkbox" />
+            <input type="checkbox" aria-label="Abrir menu de navegação" />
             <span></span>
             <span></span>
             <span></span>
@@ -129,7 +130,6 @@
                 <li><a href="about.html"><i class="fa fa-user"></i><span>Sobre</span></a></li>
                 <li><a href="portfolio.html"><i class="fa fa-folder-open"></i><span>Portfolio</span></a></li>
                 <li class="active"><a href="contact.html"><i class="fa fa-envelope-open"></i><span>Contato</span></a></li>
-                <li><a href="blog.html"><i class="fa fa-comments"></i><span>Blog</span></a></li>
             </ul>
         </div>
     </nav>
@@ -152,16 +152,18 @@
                 <p class="open-sans-font mb-3">Sinta-se à vontade para entrar em contato comigo. Estou sempre aberto a discutir novos projetos, ideias criativas ou oportunidades para fazer parte de suas visões.</p>
                 <p class="open-sans-font custom-span-contact position-relative">
                     <i class="fa fa-envelope-open position-absolute"></i>
-                    <span class="d-block">mail me</span>leonardoguiato99@gmail.com
+                    <span class="d-block">E-mail</span><a href="mailto:leonardoguiato99@gmail.com">leonardoguiato99@gmail.com</a>
                 </p>
                 <p class="open-sans-font custom-span-contact position-relative">
                     <i class="fa fa-phone-square position-absolute"></i>
-                    <span class="d-block">Telefone</span>18991988337
+                    <span class="d-block">Telefone</span><a href="tel:+5518991988337">(18) 99198-8337</a>
                 </p>
                 <ul class="social list-unstyled pt-1 mb-5">
-                    <li class="linkedin"><a title="Linkdin" href="https://www.linkedin.com/in/leonardo-guiato/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    <li class="linkedin"><a title="LinkedIn" href="https://www.linkedin.com/in/leonardo-guiato/" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a>
                     </li>
-                    <li class="whatsapp"><a title="WhatsApp" href="https://api.whatsapp.com/send?phone=5518991988337" target="_blank"><i class="fa fa-whatsapp"></i></a>
+                    <li class="github"><a title="GitHub" href="https://github.com/LeoguiatoM5" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
+                    </li>
+                    <li class="whatsapp"><a title="WhatsApp" href="https://api.whatsapp.com/send?phone=5518991988337" target="_blank" rel="noopener noreferrer"><i class="fa fa-whatsapp"></i></a>
                     </li>
                    
                 </ul>
@@ -173,24 +175,31 @@
                     <div class="contactform">
                         <div class="row">
                             <div class="col-12 col-md-4">
-                                <input type="text" name="name" placeholder="Seu Nome">
+                                <label class="sr-only" for="contact-name">Seu nome</label>
+                                <input id="contact-name" type="text" name="name" placeholder="Seu nome" autocomplete="name" required>
                             </div>
                             <div class="col-12 col-md-4">
-                                <input type="email" name="_replyto" placeholder="Seu Email">
+                                <label class="sr-only" for="contact-email">Seu e-mail</label>
+                                <input id="contact-email" type="email" name="_replyto" placeholder="Seu e-mail" autocomplete="email" required>
                             </div>
                             <div class="col-12 col-md-4">
-                                <input type="text" name="subject" placeholder="Assunto">
+                                <label class="sr-only" for="contact-subject">Assunto</label>
+                                <input id="contact-subject" type="text" name="subject" placeholder="Assunto" required>
                             </div>
                             <div class="col-12">
-                                <textarea name="message" placeholder="Escreva"></textarea>
+                                <label class="sr-only" for="contact-message">Mensagem</label>
+                                <textarea id="contact-message" name="message" placeholder="Escreva sua mensagem" required></textarea>
                                 <button type="submit" class="btn btn-contact">ENVIAR</button>
                             </div>
                         </div>
                     </div>
                 </form>
                 <!-- Mensagem de Sucesso -->
-                <div id="success-message" style="display: none;">
+                <div id="success-message" class="form-feedback form-feedback-success" role="status" aria-live="polite" hidden>
                     Mensagem enviada com sucesso!
+                </div>
+                <div id="error-message" class="form-feedback form-feedback-error" role="alert" hidden>
+                    Não foi possível enviar agora. Tente novamente ou use o e-mail acima.
                 </div>
                 <!-- Fim da Mensagem de Sucesso -->
             </div>
@@ -220,9 +229,15 @@
     document.addEventListener("DOMContentLoaded", function () {
         var form = document.querySelector(".contactform");
         var successMessage = document.getElementById("success-message");
+        var errorMessage = document.getElementById("error-message");
+        var submitButton = form.querySelector('button[type="submit"]');
 
         form.addEventListener("submit", function (event) {
             event.preventDefault();
+            successMessage.hidden = true;
+            errorMessage.hidden = true;
+            submitButton.disabled = true;
+            submitButton.textContent = "ENVIANDO...";
 
             var formData = new FormData(form);
             var xhr = new XMLHttpRequest();
@@ -232,12 +247,14 @@
             xhr.onreadystatechange = function () {
                 if (xhr.readyState !== XMLHttpRequest.DONE) return;
 
-                if (xhr.status === 200) {
-                    form.reset(); // Limpa o formulário
-                    form.classList.add("form-success"); // Adiciona a classe para estilizar o sucesso
-                    successMessage.style.display = "block"; // Exibe a mensagem de sucesso
+                submitButton.disabled = false;
+                submitButton.textContent = "ENVIAR";
+
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    form.reset();
+                    successMessage.hidden = false;
                 } else {
-                    console.error("Ocorreu um erro ao enviar o formulário.");
+                    errorMessage.hidden = false;
                 }
             };
 

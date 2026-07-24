@@ -5,6 +5,177 @@ html {
   height: 100%;
 }
 
+/* Professional portfolio refinements */
+#switcher,
+#showSwitcher {
+  display: none !important;
+}
+
+.home .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+}
+
+.home .hero-actions .btn {
+  margin: 0;
+}
+
+.about .skill-card {
+  min-height: 118px;
+  height: 100%;
+  padding: 22px 14px;
+  border: 1px solid #2f2f2f;
+  border-radius: 10px;
+  background: #252525;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  text-align: center;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.about .skill-card:hover {
+  transform: translateY(-4px);
+}
+
+.about .skill-card i {
+  font-size: 28px;
+}
+
+.about .skill-card span {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+
+.about .box-stats h3.no-plus::after {
+  content: none;
+}
+
+.portfolio .grid li figure .project-cover {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 225px;
+  padding: 30px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #242424, #151515);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.portfolio .grid li figure:hover .project-cover {
+  transform: translateY(-3px);
+}
+
+.portfolio .project-cover i {
+  font-size: 42px;
+}
+
+.portfolio .project-cover small {
+  color: #bbb;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.portfolio .project-preview {
+  min-height: 230px;
+  padding: 35px;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #202020, #171717);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  text-align: center;
+}
+
+.portfolio .project-preview i {
+  font-size: 54px;
+}
+
+.portfolio .project-preview p {
+  max-width: 520px;
+  margin: 0;
+  color: #eee;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+body.light.about .skill-card {
+  background: #fff;
+  border-color: #ddd;
+}
+
+body.light.about .skill-card span {
+  color: #333;
+}
+
+.contact .custom-span-contact a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact .custom-span-contact a:hover {
+  text-decoration: underline;
+}
+
+.contact .form-feedback {
+  margin-top: 20px;
+  padding: 13px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.contact .form-feedback-success {
+  color: #d8ffe2;
+  background: #176b32;
+}
+
+.contact .form-feedback-error {
+  color: #ffe3e3;
+  background: #8b2029;
+}
+
+.contact .btn:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 body {
   font-family: "Poppins", sans-serif;
   font-size: 15px;
@@ -66,7 +237,7 @@ body.home.light .home-details h6 {
 }
 
 body.home.light .bg {
-  background-image: url(../img/light.jpg);
+  background-image: url(../img/leonardo-guiato.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -466,7 +637,7 @@ body.light hr.separator {
 }
 
 .home .bg {
-  background-image: url(../img/2.jpg);
+  background-image: url(../img/leonardo-guiato.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
