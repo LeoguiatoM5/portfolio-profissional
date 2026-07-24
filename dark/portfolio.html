@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="utf-8" />
-    <title>Portfolio</title>
+    <title>Projetos | Leonardo Guiato</title>
+    <meta
+      name="description"
+      content="Projetos de QA Automation, testes com Cypress e desenvolvimento de APIs de Leonardo Guiato."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Template Google Fonts -->
@@ -238,7 +242,7 @@
       <!-- Mobile Menu Starts -->
       <nav role="navigation" class="d-block d-lg-none">
         <div id="menuToggle">
-          <input type="checkbox" />
+          <input type="checkbox" aria-label="Abrir menu de navegação" />
           <span></span>
           <span></span>
           <span></span>
@@ -288,72 +292,41 @@
             <!-- Portfolio Item Starts -->
             <li>
               <figure>
-                <img src="img/projects/project-1.jpg" alt="Portolio Image" />
-                <div><span>Imagem Projeto</span></div>
+                <div class="project-cover project-cover-radar">
+                  <i class="fa fa-crosshairs" aria-hidden="true"></i>
+                  <span>QA Radar</span>
+                  <small>Playwright · TypeScript · Cross-browser</small>
+                </div>
               </figure>
             </li>
             <!-- Portfolio Item Ends -->
             <!-- Portfolio Item Starts -->
             <li>
               <figure>
-                <img src="img/projects/project-2.jpg" alt="Portolio Image" />
-                <div><span>Imagem Projeto</span></div>
+                <div class="project-cover project-cover-cypress">
+                  <i class="fa fa-check-circle" aria-hidden="true"></i>
+                  <span>Automação com Cypress</span>
+                  <small>Regressão · GitHub Actions · Evidências</small>
+                </div>
               </figure>
             </li>
             <!-- Portfolio Item Ends -->
             <!-- Portfolio Item Starts -->
             <li>
               <figure>
-                <img src="img/projects/project-3.jpg" alt="Portolio Image" />
-                <div><span>Imagem Projeto</span></div>
+                <div class="project-cover project-cover-api">
+                  <i class="fa fa-exchange" aria-hidden="true"></i>
+                  <span>API Banco</span>
+                  <small>Node.js · SQL · Jest</small>
+                </div>
               </figure>
             </li>
             <!-- Portfolio Item Ends -->
             <!-- Portfolio Item Starts -->
             <li>
               <figure>
-                <img src="img/projects/publi.png" alt="Portolio Image" />
+                <img src="img/projects/publi.png" alt="Projeto Suplen Hair" />
                 <div><span>Suplen Hair</span></div>
-              </figure>
-            </li>
-            <!-- Portfolio Item Ends -->
-            <!-- Portfolio Item Starts -->
-            <li>
-              <figure>
-                <img src="img/projects/project-5.jpg" alt="Portolio Image" />
-                <div><span>Em construção</span></div>
-              </figure>
-            </li>
-            <!-- Portfolio Item Ends -->
-            <!-- Portfolio Item Starts -->
-            <li>
-              <figure>
-                <img src="img/projects/project-6.jpg" alt="Portolio Image" />
-                <div><span>Em construção</span></div>
-              </figure>
-            </li>
-            <!-- Portfolio Item Ends -->
-            <!-- Portfolio Item Starts -->
-            <li>
-              <figure>
-                <img src="img/projects/project-7.jpg" alt="Portolio Image" />
-                <div><span>Em construção</span></div>
-              </figure>
-            </li>
-            <!-- Portfolio Item Ends -->
-            <!-- Portfolio Item Starts -->
-            <li>
-              <figure>
-                <img src="img/projects/project-8.jpg" alt="Portolio Image" />
-                <div><span>Em construção</span></div>
-              </figure>
-            </li>
-            <!-- Portfolio Item Ends -->
-            <!-- Portfolio Item Starts -->
-            <li>
-              <figure>
-                <img src="img/projects/project-9.jpg" alt="Portolio Image" />
-                <div><span>Em construção</span></div>
               </figure>
             </li>
             <!-- Portfolio Item Ends -->
@@ -368,13 +341,13 @@
               <figure>
                 <!-- Project Details Starts -->
                 <figcaption>
-                  <h3>Imagem Projeto</h3>
+                  <h3>QA Radar</h3>
                   <div class="row open-sans-font">
                     <div class="col-12 col-sm-6 mb-2">
                       <i class="fa fa-file-text-o pr-2"></i
                       ><span class="project-label">Projeto </span>:
                       <span class="ft-wt-600 uppercase"
-                        >Reconhecimento Fácil</span
+                        >Diagnóstico de qualidade web</span
                       >
                     </div>
                     <div class="col-12 col-sm-6 mb-2"></div>
@@ -382,7 +355,7 @@
                       <i class="fa fa-code pr-2"></i
                       ><span class="project-label">Linguagens </span>:
                       <span class="ft-wt-600 uppercase"
-                        >HTML, CSS, Javascript</span
+                        >Node.js, TypeScript, Playwright</span
                       >
                     </div>
                     <div class="col-12 col-sm-6 mb-2">
@@ -390,9 +363,10 @@
                       ><span class="project-label">Prévia </span>:
                       <span class="ft-wt-600 uppercase"
                         ><a
-                          href="https://github.com/LeoguiatoM5/reconhecimentoFacil"
+                          href="https://github.com/LeoguiatoM5/QA_Radar"
                           target="_blank"
-                          >https://github.com/LeoguiatoM5/reconhecimentoFacil</a
+                          rel="noopener noreferrer"
+                          >github.com/LeoguiatoM5/QA_Radar</a
                         ></span
                       >
                     </div>
@@ -400,7 +374,13 @@
                 </figcaption>
                 <!-- Project Details Ends -->
                 <!-- Main Project Content Starts -->
-                <img src="img/projects/project-1.jpg" alt="Portolio Image" />
+                <div class="project-preview">
+                  <i class="fa fa-crosshairs" aria-hidden="true"></i>
+                  <p>
+                    Smoke testing, inspeção segura do DOM, evidências visuais e
+                    relatórios HTML/JSON em Chromium, Firefox e WebKit.
+                  </p>
+                </div>
                 <!-- Main Project Content Ends -->
               </figure>
             </li>
@@ -410,27 +390,32 @@
               <figure>
                 <!-- Project Details Starts -->
                 <figcaption>
-                  <h3></h3>
+                  <h3>Suíte de Testes Automatizados com Cypress</h3>
                   <div class="row open-sans-font">
                     <div class="col-6 mb-2">
                       <i class="fa fa-file-text-o pr-2"></i
                       ><span class="project-label">Projeto </span>:
-                      <span class="ft-wt-600 uppercase">ChatBot</span>
+                      <span class="ft-wt-600 uppercase"
+                        >Testes funcionais e de regressão</span
+                      >
                     </div>
                     <div class="col-6 mb-2"></div>
                     <div class="col-6 mb-2">
                       <i class="fa fa-code pr-2"></i
                       ><span class="project-label">Linguagens </span>:
-                      <span class="ft-wt-600 uppercase">JavaScript</span>
+                      <span class="ft-wt-600 uppercase"
+                        >Cypress, JavaScript, GitHub Actions</span
+                      >
                     </div>
                     <div class="col-6 mb-2">
                       <i class="fa fa-external-link pr-2"></i
                       ><span class="project-label">Prévia </span>:
                       <span class="ft-wt-600 uppercase"
                         ><a
-                          href="https://github.com/LeoguiatoM5/Chat-bot-Venom"
+                          href="https://github.com/LeoguiatoM5"
                           target="_blank"
-                          >https://github.com/LeoguiatoM5/Chat-bot-Venom</a
+                          rel="noopener noreferrer"
+                          >github.com/LeoguiatoM5</a
                         ></span
                       >
                     </div>
@@ -438,7 +423,13 @@
                 </figcaption>
                 <!-- Project Details Ends -->
                 <!-- Main Project Content Starts -->
-                <img src="img/projects/project-2.jpg" alt="Portolio Image" />
+                <div class="project-preview">
+                  <i class="fa fa-check-circle" aria-hidden="true"></i>
+                  <p>
+                    Suíte de testes funcionais e de regressão com execução
+                    contínua no GitHub Actions e geração de evidências.
+                  </p>
+                </div>
                 <!-- Main Project Content Ends -->
               </figure>
             </li>
@@ -448,12 +439,12 @@
               <figure>
                 <!-- Project Details Starts -->
                 <figcaption>
-                  <h3>Imagem Projeto</h3>
+                  <h3>API Banco - Desafio Cubos</h3>
                   <div class="row open-sans-font">
                     <div class="col-6 mb-2">
                       <i class="fa fa-file-text-o pr-2"></i
                       ><span class="project-label"
-                        >API RESTful de Banco com Express e Node.js</span
+                        >API REST com testes automatizados</span
                       >:
                       <span class="ft-wt-600 uppercase">Back End</span>
                     </div>
@@ -462,7 +453,7 @@
                       <i class="fa fa-code pr-2"></i
                       ><span class="project-label">Linguagens </span>:
                       <span class="ft-wt-600 uppercase">
-                        Javascript(Métodos de Criptografia)</span
+                        Node.js, Express, SQL e Jest</span
                       >
                     </div>
                     <div class="col-6 mb-2">
@@ -472,7 +463,8 @@
                         ><a
                           href="https://github.com/LeoguiatoM5/Banco-Digital-backend-API"
                           target="_blank"
-                          >https://github.com/LeoguiatoM5/Banco-Digital-backend-API</a
+                          rel="noopener noreferrer"
+                          >github.com/LeoguiatoM5/Banco-Digital-backend-API</a
                         ></span
                       >
                     </div>
@@ -510,29 +502,28 @@
               <figure>
                 <!-- Project Details Starts -->
                 <figcaption>
-                  <h3>SuplenHair feito para cliente</h3>
+                  <h3>Suplen Hair - Projeto para cliente</h3>
                   <div class="row open-sans-font">
                     <div class="col-6 mb-2">
                       <i class="fa fa-file-text-o pr-2"></i
-                      ><span class="project-label"> </span>:
-                      <span class="ft-wt-600 uppercase"></span>
+                      ><span class="project-label">Projeto</span>:
+                      <span class="ft-wt-600 uppercase">Website comercial</span>
                     </div>
                     <div class="col-6 mb-2">
                       <i class="fa fa-user-o pr-2"></i
-                      ><span class="project-label"> </span>:
-                      <span class="ft-wt-600 uppercase">Cliente Sergio</span>
+                      ><span class="project-label">Cliente</span>:
+                      <span class="ft-wt-600 uppercase">Sérgio</span>
                     </div>
                     <div class="col-6 mb-2">
                       <i class="fa fa-code pr-2"></i
-                      ><span class="project-label"> </span>:
-                      <span class="ft-wt-600 uppercase"></span>
+                      ><span class="project-label">Atuação</span>:
+                      <span class="ft-wt-600 uppercase">Desenvolvimento web</span>
                     </div>
                     <div class="col-6 mb-2">
-                      <a href="https://suplemhair.com.br" target="_blank">https://suplemhair.com.br</a>
                       <i class="fa fa-external-link pr-2"></i
-                      ><span class="project-label"></span>:
+                      ><span class="project-label">Site</span>:
                       <span class="ft-wt-600 uppercase"
-                        ><a href="#" target="_blank"></a></span
+                        ><a href="https://suplemhair.com.br" target="_blank" rel="noopener noreferrer">suplemhair.com.br</a></span
                       >
                     </div>
                   </div>
@@ -753,12 +744,6 @@
           </ul>
           <!-- Portfolio Navigation Starts -->
           <nav>
-            <span class="icon nav-prev"
-              ><img src="img/projects/navigation/left-arrow.png" alt="previous"
-            /></span>
-            <span class="icon nav-next"
-              ><img src="img/projects/navigation/right-arrow.png" alt="next"
-            /></span>
             <span class="nav-close"
               ><img
                 src="img/projects/navigation/close-button.png"
