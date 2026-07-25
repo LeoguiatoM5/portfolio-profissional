@@ -1,6 +1,8 @@
 
-jQuery(document).ready(function() {
+	jQuery(document).ready(function() {
 	"use strict";
+	// O seletor legado está oculto e não faz parte da interface acessível.
+	jQuery("#switcher, #showSwitcher").remove();
 
     jQuery("#hideSwitcher, #showSwitcher").click(function () {
 

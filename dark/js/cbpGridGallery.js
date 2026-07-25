@@ -73,6 +73,9 @@
 		this.slideshow = this.el.querySelector( 'section.slideshow > ul' );
 		// slideshow grid items
 		this.slideshowItems = [].slice.call( this.slideshow.children );
+		while ( this.slideshowItems.length > this.gridItems.length ) {
+			this.slideshow.removeChild( this.slideshowItems.pop() );
+		}
 		// index of current slideshow item
 		this.current = -1;
 		// slideshow control buttons
@@ -106,9 +109,9 @@
 		} );
 
 		// slideshow controls
-		this.ctrlPrev.addEventListener( 'click', function() { self._navigate( 'prev' ); } );
-		this.ctrlNext.addEventListener( 'click', function() { self._navigate( 'next' ); } );
-		this.ctrlClose.addEventListener( 'click', function() { self._closeSlideshow(); } );
+		if ( this.ctrlPrev ) this.ctrlPrev.addEventListener( 'click', function() { self._navigate( 'prev' ); } );
+		if ( this.ctrlNext ) this.ctrlNext.addEventListener( 'click', function() { self._navigate( 'next' ); } );
+		if ( this.ctrlClose ) this.ctrlClose.addEventListener( 'click', function() { self._closeSlideshow(); } );
 
 		// window resize
 		window.addEventListener( 'resize', function() { self._resizeHandler(); } );

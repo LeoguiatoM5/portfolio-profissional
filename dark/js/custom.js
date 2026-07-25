@@ -5,10 +5,13 @@
 	
 	function stop_videos() {
 		var video = document.getElementById("video");
-		if (video.paused !== true && video.ended !== true) {
+		if (video && video.paused !== true && video.ended !== true) {
 			video.pause();
 		}
-		$('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+		var youtubeVideo = $('.youtube-video')[0];
+		if (youtubeVideo && youtubeVideo.contentWindow) {
+			youtubeVideo.contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+		}
 	}
 
 	$(document).ready(function() {
@@ -67,7 +70,11 @@
 		var item = $(".grid li figure");
 		var elementsLength = item.length;
 		for (var i = 0; i < elementsLength; i++) {
-			$(item[i]).hoverdir();
+			// Os cards atuais usam .project-cover como conteúdo permanente.
+			// O hoverdir legado oculta qualquer div ao entrar no card.
+			if (!$(item[i]).find('.project-cover').length) {
+				$(item[i]).hoverdir();
+			}
 		}
 
 		
