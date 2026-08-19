@@ -5,7 +5,7 @@
     <title>Projetos | Leonardo Guiato</title>
     <meta
       name="description"
-      content="Projetos de QA Automation, testes com Cypress e desenvolvimento de APIs de Leonardo Guiato."
+      content="Projetos de Leonardo Guiato: AI Operations Hub (IA, RAG e governança), QA Radar, automação de testes com Cypress e desenvolvimento de APIs REST."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -292,6 +292,17 @@
             <!-- Portfolio Item Starts -->
             <li>
               <figure>
+                <div class="project-cover project-cover-ai">
+                  <i class="fa fa-sitemap" aria-hidden="true"></i>
+                  <span>AI Operations Hub</span>
+                  <small>LangGraph · RAG · FastAPI · 571 testes</small>
+                </div>
+              </figure>
+            </li>
+            <!-- Portfolio Item Ends -->
+            <!-- Portfolio Item Starts -->
+            <li>
+              <figure>
                 <div class="project-cover project-cover-radar">
                   <i class="fa fa-crosshairs" aria-hidden="true"></i>
                   <span>QA Radar</span>
@@ -341,6 +352,77 @@
               <figure>
                 <!-- Project Details Starts -->
                 <figcaption>
+                  <h3>AI Operations Hub</h3>
+                  <div class="row open-sans-font">
+                    <div class="col-12 col-sm-6 mb-2">
+                      <i class="fa fa-file-text-o pr-2"></i
+                      ><span class="project-label">Projeto </span>:
+                      <span class="ft-wt-600 uppercase"
+                        >Automação empresarial com IA, RAG e governança</span
+                      >
+                    </div>
+                    <div class="col-12 col-sm-6 mb-2">
+                      <i class="fa fa-check-square-o pr-2"></i
+                      ><span class="project-label">Qualidade </span>:
+                      <span class="ft-wt-600 uppercase"
+                        >571 testes · 97% de cobertura</span
+                      >
+                    </div>
+                    <div class="col-12 col-sm-6 mb-2">
+                      <i class="fa fa-code pr-2"></i
+                      ><span class="project-label">Stack </span>:
+                      <span class="ft-wt-600 uppercase"
+                        >Python, FastAPI, LangGraph, ChromaDB, PostgreSQL,
+                        Docker</span
+                      >
+                    </div>
+                    <div class="col-12 col-sm-6 mb-2">
+                      <i class="fa fa-external-link pr-2"></i
+                      ><span class="project-label">Repositório </span>:
+                      <span class="ft-wt-600 uppercase"
+                        ><a
+                          href="https://github.com/LeoguiatoM5/AI_Operations_Hub"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >github.com/LeoguiatoM5/AI_Operations_Hub</a
+                        ></span
+                      >
+                    </div>
+                  </div>
+                </figcaption>
+                <!-- Project Details Ends -->
+                <!-- Main Project Content Starts -->
+                <div class="project-preview">
+                  <i class="fa fa-sitemap" aria-hidden="true"></i>
+                  <p>
+                    Plataforma que interpreta solicitações em linguagem natural,
+                    consulta bases corporativas via RAG e aciona automações com
+                    rastreabilidade e controle de permissões. A orquestração
+                    multiagente em LangGraph garante três coisas: sem contexto
+                    relevante o LLM não responde; operações de escrita param em
+                    <em>waiting_approval</em> até aprovação humana; e toda
+                    resposta passa por avaliação de qualidade em cinco dimensões.
+                  </p>
+                  <p>
+                    Busca semântica com ChromaDB sobre .txt, .md, .json e .pdf,
+                    catálogo de ferramentas com escopos de leitura/escrita,
+                    trilha completa de decisões e servidor MCP para integração
+                    com o Claude Desktop. Backend em FastAPI com SQLAlchemy
+                    assíncrono, PostgreSQL/SQLite, Alembic e Docker Compose —
+                    571 testes automatizados, 97% de cobertura via pytest, Ruff
+                    e mypy, licença MIT e mais de 100 decisões de engenharia
+                    documentadas.
+                  </p>
+                </div>
+                <!-- Main Project Content Ends -->
+              </figure>
+            </li>
+            <!-- Portfolio Item Detail Ends -->
+            <!-- Portfolio Item Detail Starts -->
+            <li>
+              <figure>
+                <!-- Project Details Starts -->
+                <figcaption>
                   <h3>QA Radar</h3>
                   <div class="row open-sans-font">
                     <div class="col-12 col-sm-6 mb-2">
@@ -350,7 +432,13 @@
                         >Diagnóstico de qualidade web</span
                       >
                     </div>
-                    <div class="col-12 col-sm-6 mb-2"></div>
+                    <div class="col-12 col-sm-6 mb-2">
+                      <i class="fa fa-flask pr-2"></i
+                      ><span class="project-label">Status </span>:
+                      <span class="ft-wt-600 uppercase"
+                        >Projeto autoral em Beta</span
+                      >
+                    </div>
                     <div class="col-12 col-sm-6 mb-2">
                       <i class="fa fa-code pr-2"></i
                       ><span class="project-label">Linguagens </span>:
@@ -377,8 +465,16 @@
                 <div class="project-preview">
                   <i class="fa fa-crosshairs" aria-hidden="true"></i>
                   <p>
-                    Smoke testing, inspeção segura do DOM, evidências visuais e
-                    relatórios HTML/JSON em Chromium, Firefox e WebKit.
+                    Ferramenta local em Node.js, TypeScript e Playwright para
+                    smoke testing, observação do navegador e inspeção segura do
+                    DOM. Detecta erros JavaScript, respostas HTTP 4xx/5xx,
+                    falhas de DNS/TLS/conexão, imagens quebradas e problemas de
+                    acessibilidade.
+                  </p>
+                  <p>
+                    Gera evidências visuais e relatórios HTML/JSON, executa
+                    cross-browser em Chromium, Firefox e WebKit e suporta
+                    quality gates em CLI e CI/CD.
                   </p>
                 </div>
                 <!-- Main Project Content Ends -->

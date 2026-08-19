@@ -119,6 +119,12 @@ html {
   line-height: 1.7;
 }
 
+/* URLs longas de repositório não podem estourar a largura do modal */
+.portfolio .slideshow figcaption a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
 body.light.about .skill-card {
   background: #fff;
   border-color: #ddd;
