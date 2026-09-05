@@ -1,343 +1,39 @@
-﻿<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="utf-8" />
-    <title>Leonardo Guiato | QA Automation Engineer | Integrações & IA</title>
-    <meta
-      name="description"
-      content="Portfólio de Leonardo Guiato, QA Automation Engineer e SDET com mais de 7 anos de experiência em qualidade, automação de workflows com n8n e Python, integrações de sistemas/CRM via APIs REST e webhooks, e automações orientadas por IA e LLMs."
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Fontes do Google do Template -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/png" href="/dark/sons/Screenshot_3.png">
-
-    <!-- Arquivos CSS do Template -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/preloader.min.css" rel="stylesheet" />
-    <link href="css/circle.css" rel="stylesheet" />
-    <link href="css/font-awesome.min.css" rel="stylesheet" />
-    <link href="css/fm.revealator.jquery.min.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./icon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./icon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./icon/favicon-16x16.png">
-    <link rel="manifest" href="./icon/site.webmanifest">
-    
-
-    <!-- Arquivo de Estilo CSS -->
-    <link href="css/skins/yellow.css" rel="stylesheet" />
-
-    <!-- Trocador de Estilos ao Vivo - apenas demonstração -->
-    <link
-      rel="alternate stylesheet"
-      type="text/css"
-      title="blue"
-      href="css/skins/blue.css"
-    />
-    <link
-      rel="alternate stylesheet"
-      type="text/css"
-      title="green"
-      href="css/skins/green.css"
-    />
-    <link
-      rel="alternate stylesheet"
-      type="text/css"
-      title="yellow"
-      href="css/skins/yellow.css"
-    />
-    <link
-      rel="alternate stylesheet"
-      type="text/css"
-      title="blueviolet"
-      href="css/skins/blueviolet.css"
-    />
-    <link
-      rel="alternate stylesheet"
-      type="text/css"
-      title="goldenrod"
-      href="css/skins/goldenrod.css"
-    />
-    <link
-      rel="alternate stylesheet"
-      type="text/css"
-      title="magenta"
-      href="css/skins/magenta.css"
-    />
-    <link
-      rel="alternate stylesheet"
-      type="text/css"
-      title="orange"
-      href="css/skins/orange.css"
-    />
-    <link
-      rel="alternate stylesheet"
-      type="text/css"
-      title="purple"
-      href="css/skins/purple.css"
-    />
-    <link
-      rel="alternate stylesheet"
-      type="text/css"
-      title="red"
-      href="css/skins/red.css"
-    />
-    <link
-      rel="alternate stylesheet"
-      type="text/css"
-      title="yellowgreen"
-      href="css/skins/yellowgreen.css"
-    />
-    <link rel="stylesheet" type="text/css" href="css/styleswitcher.css" />
-
-    <!-- Arquivo JS do Modernizr -->
-    <script src="js/modernizr.custom.js"></script>
-  </head>
-
-  <body class="home">
-    <!-- Início do Trocador de Estilos ao Vivo - apenas demonstração -->
-    <div id="switcher" class="">
-      <div class="content-switcher">
-        <h4>Troca de Estilo</h4>
-        <ul>
-          <li>
-            <a
-              href="#"
-              onclick="setActiveStyleSheet('blue');"
-              title="Azul"
-              class="color"
-              ><img src="img/styleswitcher/blue.png" alt="Azul"
-            /></a>
-          </li>
-          <li>
-            <a
-              href="#"
-              onclick="setActiveStyleSheet('green');"
-              title="Verde"
-              class="color"
-              ><img src="img/styleswitcher/green.png" alt="Verde"
-            /></a>
-          </li>
-          <li>
-            <a
-              href="#"
-              onclick="setActiveStyleSheet('yellow');"
-              title="Amarelo"
-              class="color"
-              ><img src="img/styleswitcher/yellow.png" alt="Amarelo"
-            /></a>
-          </li>
-          <li>
-            <a
-              href="#"
-              onclick="setActiveStyleSheet('blueviolet');"
-              title="Violeta Azulado"
-              class="color"
-              ><img
-                src="img/styleswitcher/blueviolet.png"
-                alt="Violeta Azulado"
-            /></a>
-          </li>
-          <li>
-            <a
-              href="#"
-              onclick="setActiveStyleSheet('goldenrod');"
-              title="Dourado"
-              class="color"
-              ><img src="img/styleswitcher/goldenrod.png" alt="Dourado"
-            /></a>
-          </li>
-          <li>
-            <a
-              href="#"
-              onclick="setActiveStyleSheet('magenta');"
-              title="Magenta"
-              class="color"
-              ><img src="img/styleswitcher/magenta.png" alt="Magenta"
-            /></a>
-          </li>
-          <li>
-            <a
-              href="#"
-              onclick="setActiveStyleSheet('orange');"
-              title="Laranja"
-              class="color"
-              ><img src="img/styleswitcher/orange.png" alt="Laranja"
-            /></a>
-          </li>
-          <li>
-            <a
-              href="#"
-              onclick="setActiveStyleSheet('purple');"
-              title="Roxo"
-              class="color"
-              ><img src="img/styleswitcher/purple.png" alt="Roxo"
-            /></a>
-          </li>
-          <li>
-            <a
-              href="#"
-              onclick="setActiveStyleSheet('red');"
-              title="Vermelho"
-              class="color"
-              ><img src="img/styleswitcher/red.png" alt="Vermelho"
-            /></a>
-          </li>
-          <li>
-            <a
-              href="#"
-              onclick="setActiveStyleSheet('yellowgreen');"
-              title="Verde-Amarelo"
-              class="color"
-              ><img src="img/styleswitcher/yellowgreen.png" alt="Verde-Amarelo"
-            /></a>
-          </li>
-        </ul>
-        <div id="hideSwitcher">&times;</div>
-      </div>
-    </div>
-    <div id="showSwitcher" class="styleSecondColor">
-      <i class="fa fa-cog fa-spin"></i>
-    </div>
-    <!-- Fim do Trocador de Estilos ao Vivo - apenas demonstração -->
-
-    <!-- Cabeçalho - Início -->
-    <header class="header" id="navbar-collapse-toggle">
-      <!-- Navegação Fixa - Início -->
-      <ul
-        class="icon-menu d-none d-lg-block revealator-slideup revealator-once revealator-delay1"
-      >
-        <li class="icon-box active">
-          <i class="fa fa-home"></i>
-          <a href="index.html">
-            <h2>Início</h2>
-          </a>
-        </li>
-        <li class="icon-box">
-          <i class="fa fa-user"></i>
-          <a href="about.html">
-            <h2>Sobre</h2>
-          </a>
-        </li>
-        <li class="icon-box">
-          <i class="fa fa-briefcase"></i>
-          <a href="portfolio.html">
-            <h2>Portfólio</h2>
-          </a>
-        </li>
-        <li class="icon-box">
-          <i class="fa fa-envelope-open"></i>
-          <a href="contact.html">
-            <h2>Contato</h2>
-          </a>
-        </li>
-      </ul>
-      <!-- Navegação Fixa - Fim -->
-      <!-- Menu Móvel - Início -->
-      <nav role="navigation" class="d-block d-lg-none">
-        <div id="menuToggle">
-          <input type="checkbox" aria-label="Abrir menu de navegação" />
-          <span></span>
-          <span></span>
-          <span></span>
-          <ul class="list-unstyled" id="menu">
-            <li class="active">
-              <a href="index.html"
-                ><i class="fa fa-home"></i><span>Início</span></a
-              >
-            </li>
-            <li>
-              <a href="about.html"
-                ><i class="fa fa-user"></i><span>Sobre</span></a
-              >
-            </li>
-            <li>
-              <a href="portfolio.html"
-                ><i class="fa fa-folder-open"></i><span>Portfolio</span></a
-              >
-            </li>
-            <li>
-              <a href="contact.html"
-                ><i class="fa fa-envelope-open"></i><span>Contato</span></a
-              >
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <!-- Menu Móvel - Fim -->
-    </header>
-    <!-- Cabeçalho - Fim -->
-    <!-- Conteúdo Principal - Início -->
-    <section
-      class="container-fluid main-container container-home p-0 revealator-slideup revealator-once revealator-delay1"
-    >
-      <div class="color-block d-none d-lg-block"></div>
-      
-      <div class="row home-details-container align-items-center">
-        <div class="col-lg-4 bg position-fixed d-none d-lg-block"></div>
-        
-        <div
-          class="col-12 col-lg-8 offset-lg-4 home-details text-left text-sm-center text-lg-left"
-        >
-      
-          <div>
-            <img
-              src="img/leonardo-guiato.jpg"
-              class="img-fluid main-img-mobile d-none d-sm-block d-lg-none"
-              alt="Foto profissional de Leonardo Guiato"
-            />
-            <h6
-              class="text-uppercase open-sans-font mb-0 d-block d-sm-none d-lg-block"
-            >
-              Olá!
-            </h6>
-            <h1 class="text-uppercase poppins-font">
-              <span> Eu sou</span> Leonardo Guiato
-            </h1>
-            <p class="open-sans-font">
-              QA Automation Engineer e SDET com mais de 7 anos de experiência em
-              qualidade, automação e desenvolvimento para aplicações web, APIs e
-              integrações. Automatizo workflows com n8n e Python, integro
-              sistemas e CRM via APIs REST e webhooks, e construo automações
-              orientadas por IA e LLMs — sempre com Cypress, Playwright,
-              TypeScript e pipelines CI/CD sustentando a rastreabilidade.
-            </p>
-          <div class="hero-actions">
-            <a href="about.html" class="btn btn-about">Sobre mim</a>
-            <a href="portfolio.html" class="btn btn-portfolio">Ver projetos</a>
-            <a
-              href="./pdf-portifolio/Curriculo_Leonardo_Guiato_QA.pdf"
-              download
-              class="btn btn-download"
-              >Baixar CV</a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Conteúdo Principal - Fim -->
-
-    <!-- Arquivos JS do Template -->
-    <script src="js/jquery-3.5.0.min.js"></script>
-    <script src="js/styleswitcher.js"></script>
-    <script src="js/preloader.min.js"></script>
-    <script src="js/fm.revealator.jquery.min.js"></script>
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src="js/masonry.pkgd.min.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/cbpGridGallery.js"></script>
-    <script src="js/jquery.hoverdir.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/custom.js"></script>
-  </body>
-</html>
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0b1120"><title>QA Automation Engineer & SDET | Leonardo Guiato</title><meta name="description" content="Leonardo Guiato, QA Automation Engineer e SDET. Projetos, experiência em testes web e APIs, automação, integrações e IA."><link rel="icon" href="icon/favicon-32x32.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/font-awesome.min.css"><link rel="stylesheet" href="css/site.css?v=20260905"><script src="js/site.js?v=20260905" defer></script></head>
+<body><a class="skip-link" href="#main">Pular para o conteúdo</a><header class="site-header"><div class="shell header-inner"><a class="brand" href="index.html" aria-label="Leonardo Guiato, início"><span class="brand-mark">lg<span>.</span></span><span class="brand-name">LEONARDO<br>GUIATO</span></a><button class="menu-toggle icon-button" aria-expanded="false" aria-controls="navigation" aria-label="Abrir menu"><span></span><span></span></button><nav id="navigation" aria-label="Navegação principal"><a href="index.html" aria-current="page" >Início</a><a href="about.html" >Sobre</a><a href="portfolio.html" >Projetos</a><a href="contact.html" >Contato</a><a class="nav-social" href="https://github.com/LeoguiatoM5" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa fa-github" aria-hidden="true"></i> ↗</a></nav></div></header><main id="main"><section class="shell hero"><div class="hero-copy"><div class="eyebrow intro-label"><span class="line"></span> QA AUTOMATION ENGINEER / SDET</div><h1>Qualidade em<br>cada <span class="accent">entrega.</span></h1><p class="hero-lead">Sou Leonardo Guiato. Transformo cenários críticos em testes confiáveis e conecto sistemas com automação.</p><div class="hero-actions"><a class="button primary" href="portfolio.html">Explorar projetos <span>↗</span></a><a class="button secondary" href="contact.html">Vamos conversar <span>↗</span></a></div><div class="hero-footnote"><span>Três Lagoas, MS</span><span>Atuação remota</span></div></div><div class="hero-profile"><div class="portrait-frame"><img src="img/leonardo-guiato.jpg" alt="Leonardo Guiato" width="480" height="580" fetchpriority="high"><div class="portrait-caption"><span>LEONARDO GUIATO</span><span>Qualidade · Automação · IA</span></div></div><div class="profile-note"><span class="note-icon">✓</span><div><strong>Mais confiança. Menos risco.</strong><span>Do requisito à validação da entrega.</span></div></div></div></section>
+<section class="shell proof-strip" aria-label="Resumo profissional"><div><strong>7<span>+</span></strong><p>Anos de experiência<br>em qualidade de software</p></div><div><strong>Web <span>&</span> API</strong><p>Testes de ponta a ponta<br>com foco no que importa</p></div><div><strong>CTAL-TM</strong><p>ISTQB® Advanced Level<br>Test Management</p></div></section>
+<section class="shell section"><div class="section-heading"><div><span class="eyebrow">01 / PROJETOS SELECIONADOS</span><h2>Da estratégia<br><span class="muted">à prática.</span></h2></div><a class="text-link" href="portfolio.html">Todos os projetos ↗</a></div><div class="project-grid"><article class="project-card" data-category="ai"><button class="project-open" data-project="0" aria-label="Ver projeto AI Operations Hub"><div class="project-visual visual-ai"><span class="project-symbol"><i class="fa fa-sitemap" aria-hidden="true"></i></span><span class="visual-index">01</span><span class="visual-stack">LangGraph · RAG · FastAPI</span><span class="project-arrow">↗</span></div><div class="project-copy"><span class="eyebrow">IA & Integrações</span><h3>AI Operations Hub</h3><p>Orquestração de IA com contexto, governança e rastreabilidade.</p><span class="text-link">Explorar projeto <span aria-hidden="true">↗</span></span></div></button></article><article class="project-card" data-category="qa"><button class="project-open" data-project="1" aria-label="Ver projeto QA Radar"><div class="project-visual visual-qa"><span class="project-symbol"><i class="fa fa-crosshairs" aria-hidden="true"></i></span><span class="visual-index">02</span><span class="visual-stack">Playwright · TypeScript</span><span class="project-arrow">↗</span></div><div class="project-copy"><span class="eyebrow">Qualidade de software</span><h3>QA Radar</h3><p>Diagnóstico de qualidade web com evidências e execução cross-browser.</p><span class="text-link">Explorar projeto <span aria-hidden="true">↗</span></span></div></button></article></div></section>
+<section class="shell section approach"><div><span class="eyebrow">02 / COMO EU TRABALHO</span><h2>Automação com<br><span class="accent">propósito.</span></h2><a href="about.html" class="text-link">Conheça minha trajetória ↗</a></div><div class="approach-list"><article><span>01</span><div><h3>Qualidade orientada a risco</h3><p>Priorização dos fluxos críticos, critérios de aceite claros e evidências para apoiar decisões de release.</p></div></article><article><span>02</span><div><h3>Testes que acompanham a entrega</h3><p>Playwright, Cypress e Selenium, com validação de APIs, dados em SQL e integração com CI/CD.</p></div></article><article><span>03</span><div><h3>Sistemas que trabalham juntos</h3><p>Integrações via APIs REST e webhooks, workflows com n8n e Python e automação com IA.</p></div></article></div></section><section class="shell contact-banner"><span class="eyebrow">VAMOS CONVERSAR</span><div><h2>Qual é o seu<br>próximo desafio?</h2><a class="button primary" href="contact.html">Entre em contato ↗</a></div></section></main>
+<footer class="site-footer shell"><a class="brand-mark" href="index.html" aria-label="Voltar ao início">lg<span>.</span></a><p>Leonardo Guiato <span>QA Automation Engineer & SDET</span></p><div><a href="https://www.linkedin.com/in/leonardo-guiato/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://github.com/LeoguiatoM5" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></footer><dialog class="project-dialog" id="project-0" aria-labelledby="project-title-0"><div class="dialog-top"><span class="eyebrow">PROJETO / 01</span><button class="dialog-close icon-button" aria-label="Fechar projeto">×</button></div><div class="dialog-content"><span class="eyebrow accent">IA & Integrações</span><h2 id="project-title-0">AI Operations Hub</h2><p class="dialog-stack">LangGraph · RAG · FastAPI</p><div class="project-description"><p>
+                    Plataforma que interpreta solicitações em linguagem natural,
+                    consulta bases corporativas via RAG e aciona automações com
+                    rastreabilidade e controle de permissões. A orquestração
+                    multiagente em LangGraph garante três coisas: sem contexto
+                    relevante o LLM não responde; operações de escrita param em
+                    <em>waiting_approval</em> até aprovação humana; e toda
+                    resposta passa por avaliação de qualidade em cinco dimensões.
+                  </p><p>
+                    Busca semântica com ChromaDB sobre .txt, .md, .json e .pdf,
+                    catálogo de ferramentas com escopos de leitura/escrita,
+                    trilha completa de decisões e servidor MCP para integração
+                    com o Claude Desktop. Backend em FastAPI com SQLAlchemy
+                    assíncrono, PostgreSQL/SQLite, Alembic e Docker Compose —
+                    571 testes automatizados, 97% de cobertura via pytest, Ruff
+                    e mypy, licença MIT e mais de 100 decisões de engenharia
+                    documentadas.
+                  </p></div><a class="button primary" href="https://github.com/LeoguiatoM5/AI_Operations_Hub" target="_blank" rel="noopener noreferrer">Ver no GitHub ↗</a></div></dialog><dialog class="project-dialog" id="project-1" aria-labelledby="project-title-1"><div class="dialog-top"><span class="eyebrow">PROJETO / 02</span><button class="dialog-close icon-button" aria-label="Fechar projeto">×</button></div><div class="dialog-content"><span class="eyebrow accent">Qualidade de software</span><h2 id="project-title-1">QA Radar</h2><p class="dialog-stack">Playwright · TypeScript</p><div class="project-description"><p>
+                    Ferramenta local em Node.js, TypeScript e Playwright para
+                    smoke testing, observação do navegador e inspeção segura do
+                    DOM. Detecta erros JavaScript, respostas HTTP 4xx/5xx,
+                    falhas de DNS/TLS/conexão, imagens quebradas e problemas de
+                    acessibilidade.
+                  </p><p>
+                    Gera evidências visuais e relatórios HTML/JSON, executa
+                    cross-browser em Chromium, Firefox e WebKit e suporta
+                    quality gates em CLI e CI/CD.
+                  </p></div><a class="button primary" href="https://github.com/LeoguiatoM5/QA_Radar" target="_blank" rel="noopener noreferrer">Ver no GitHub ↗</a></div></dialog><dialog class="project-dialog" id="project-2" aria-labelledby="project-title-2"><div class="dialog-top"><span class="eyebrow">PROJETO / 03</span><button class="dialog-close icon-button" aria-label="Fechar projeto">×</button></div><div class="dialog-content"><span class="eyebrow accent">Qualidade de software</span><h2 id="project-title-2">Automação com Cypress</h2><p class="dialog-stack">Cypress · GitHub Actions</p><div class="project-description"><p>
+                    Suíte de testes funcionais e de regressão com execução
+                    contínua no GitHub Actions e geração de evidências.
+                  </p></div><a class="button primary" href="https://github.com/LeoguiatoM5" target="_blank" rel="noopener noreferrer">Ver no GitHub ↗</a></div></dialog><dialog class="project-dialog" id="project-3" aria-labelledby="project-title-3"><div class="dialog-top"><span class="eyebrow">PROJETO / 04</span><button class="dialog-close icon-button" aria-label="Fechar projeto">×</button></div><div class="dialog-content"><span class="eyebrow accent">Desenvolvimento</span><h2 id="project-title-3">API Banco</h2><p class="dialog-stack">Node.js · SQL · Jest</p><div class="project-description"><p>API REST de banco digital com testes automatizados.</p><img alt="Captura de tela da API Banco" src="img/projects/project-3.jpg"/></div><a class="button primary" href="https://github.com/LeoguiatoM5/Banco-Digital-backend-API" target="_blank" rel="noopener noreferrer">Ver no GitHub ↗</a></div></dialog><dialog class="project-dialog" id="project-4" aria-labelledby="project-title-4"><div class="dialog-top"><span class="eyebrow">PROJETO / 05</span><button class="dialog-close icon-button" aria-label="Fechar projeto">×</button></div><div class="dialog-content"><span class="eyebrow accent">Desenvolvimento</span><h2 id="project-title-4">Suplen Hair</h2><p class="dialog-stack">Website comercial</p><div class="project-description"><p>Desenvolvimento web para um projeto de cliente.</p><video class="responsive-video" controls="" id="video" playsinline="" poster="./img/projects/publi.png" preload="metadata">
+<source src="./img/projects/Screen-Recording-_24-05-2024-09-03-53_.mp4" type="video/mp4"/>
+</video></div><a class="button primary" href="https://suplemhair.com.br" target="_blank" rel="noopener noreferrer">Visitar site ↗</a></div></dialog></body></html>
